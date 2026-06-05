@@ -3,11 +3,9 @@ import './theme-variables.scss';
 import './page.scss';
 
 import { JetBrains_Mono, Inter } from 'next/font/google';
-import { geolocation, ipAddress } from '@vercel/functions';
-import { headers } from 'next/headers';
 
 import { ClientProviders } from '@/components/ClientProviders/ClientProviders';
-import { SmoothScroll } from '@/components/smoothscroll'; // New kinetic scroll engine
+import { SmoothScroll } from '@/components/smoothscroll'; // Clean kinetic scroll engine
 import { PageTransition } from '@/components/PageTransition/PageTransition';
 import { GoogleAnalyticsDeferred } from '@/components/GoogleAnalyticsDeferred/GoogleAnalyticsDeferred';
 import { ThemeScript } from '@/components/ThemeScript/ThemeScript';
@@ -39,8 +37,7 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://bhonandh.github.io/';
 
 const personName = content.home?.name || 'Portfolio';
-const description =
-  'Bhonandh Sai Kandru.';
+const description = 'Bhonandh Sai Kandru.';
 const keywords = [
   'Bhonandh Sai Kandru',
   'Bhonandh',
@@ -183,51 +180,17 @@ function JsonLd() {
       name: 'Indiana State University & The Childrens Museum',
     },
     knowsAbout: [
-      'Network Engineering',
-      'Network Architecture',
-      'Network Design',
-      'Network Security',
-      'Cloud Engineering',
-      'Cloud Architecture',
-      'Cloud Security',
-      'Cyber Security',
-      'Information Security',
-      'Infrastructure Engineering',
-      'Systems Engineering',
-      'AWS',
-      'Microsoft Azure',
-      'Google Cloud Platform (GCP)',
-      'Cisco Networking',
-      'Routing and Switching',
-      'TCP/IP',
-      'Firewalls',
-      'VPNs',
-      'Intrusion Detection Systems (IDS)',
-      'Intrusion Prevention Systems (IPS)',
-      'Security Operations',
-      'Security Monitoring',
-      'Threat Detection',
-      'Incident Response',
-      'Risk Management',
-      'Vulnerability Management',
-      'Identity and Access Management (IAM)',
-      'Zero Trust Security',
-      'Cloud Infrastructure',
-      'Hybrid Cloud',
-      'Virtualization',
-      'VMware',
-      'Windows Server',
-      'Linux Administration',
-      'Network Analysis',
-      'Performance Monitoring',
-      'Disaster Recovery',
-      'Business Continuity',
-      'Infrastructure Automation',
-      'Terraform',
-      'Ansible',
-      'DevOps',
-      'Kubernetes',
-      'Docker',
+      'Network Engineering', 'Network Architecture', 'Network Design', 'Network Security',
+      'Cloud Engineering', 'Cloud Architecture', 'Cloud Security', 'Cyber Security',
+      'Information Security', 'Infrastructure Engineering', 'Systems Engineering', 'AWS',
+      'Microsoft Azure', 'Google Cloud Platform (GCP)', 'Cisco Networking', 'Routing and Switching',
+      'TCP/IP', 'Firewalls', 'VPNs', 'Intrusion Detection Systems (IDS)', 'Intrusion Prevention Systems (IPS)',
+      'Security Operations', 'Security Monitoring', 'Threat Detection', 'Incoming Response',
+      'Risk Management', 'Vulnerability Management', 'Identity and Access Management (IAM)',
+      'Zero Trust Security', 'Cloud Infrastructure', 'Hybrid Cloud', 'Virtualization', 'VMware',
+      'Windows Server', 'Linux Administration', 'Network Analysis', 'Performance Monitoring',
+      'Disaster Recovery', 'Business Continuity', 'Infrastructure Automation', 'Terraform',
+      'Ansible', 'DevOps', 'Kubernetes', 'Docker',
     ],
     sameAs,
     address: {
@@ -279,11 +242,10 @@ function JsonLd() {
   );
 }
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const headersData = await headers();
-  const ip = ipAddress({ headers: headersData }) || 'Unknown';
-  const geo = geolocation({ headers: headersData });
-  const geoData = { ip, geo };
+// CHANGED: Removed "async" block to comply with static build boundaries
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // CHANGED: Replaced server tracking functions with a build-safe telemetry object
+  const geoData = { ip: 'static-gh-pages', geo: {} };
 
   return (
     <html
@@ -298,7 +260,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body data-theme="dark" suppressHydrationWarning>
         <ClientProviders>
-          {/* SmoothScroll captures all inner frame ticks for consistent kinetic damping */}
           <SmoothScroll>
             <ScrollProgress />
             <Header header={content.header} navItems={content.global.navItems} />
