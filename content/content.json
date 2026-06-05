@@ -1,0 +1,707 @@
+{
+  "global": {
+    "openToWork": true,
+    "openToWorkText": "Open to Work · US",
+    "location": "Tampa, FL",
+    "navItems": [
+      {
+        "href": "/",
+        "label": "Home"
+      },
+      {
+        "href": "/about",
+        "label": "About"
+      },
+      {
+        "href": "/experience",
+        "label": "Experience"
+      },
+      {
+        "href": "/projects",
+        "label": "Projects"
+      },
+      {
+        "href": "/skills",
+        "label": "Skills"
+      },
+      {
+        "href": "/contact",
+        "label": "Contact"
+      }
+    ]
+  },
+  "header": {
+    "home": {
+      "href": "/",
+      "label": "LH",
+      "ariaLabel": "Go to home"
+    },
+    "mobile": {
+      "icon": "ph:arrow-up-right"
+    }
+  },
+  "home": {
+    "title": "Bhonandh Sai Kandru",
+    "name": "Bhonandh Sai Kandru",
+    "titles": [
+      "Network Engineer",
+      "Security Engineer",
+      "Network Security Engineer"
+    ],
+    "tagline": "Network Engineer at Seminole Hard Rock Hotel & Casino, where five nines isn't a goal - it's the floor. Building infrastructure that can't afford to go down",
+    "cta": {
+      "primary": {
+        "text": "About Me",
+        "url": "/about",
+        "icon": "mdi:account-outline",
+        "ariaLabel": "Learn more about me"
+      },
+      "secondary": {
+        "text": "View Work",
+        "url": "/projects",
+        "icon": "mdi:eye-outline",
+        "ariaLabel": "View my work"
+      }
+    },
+    "stats": [
+      {
+        "value": 3,
+        "suffix": "+",
+        "label": "Years Experience"
+      },
+      {
+        "value": 10000,
+        "suffix": "+",
+        "label": "Endpoints Connected"
+      },
+      {
+        "value": 30,
+        "suffix": "+",
+        "label": "Infrastructure Deployments"
+      },
+      {
+        "value": 99,
+        "suffix": "%",
+        "label": "Network Availability"
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "label": "Get to know me",
+    "openToWorkText": "Available for opportunities",
+    "descriptionHeader": "",
+    "description": "<p>I'm <strong>Bhonandh</strong>, a <em>Network Admin</em> at <strong>Seminole Hard Rock Hotel & Casino</strong>, where \"five nines\" of uptime is what the business expects, not what it hopes for. I build and keep alive the infrastructure behind revenue-critical systems </p><p>Networks don't fail quietly, and breaches don't announce themselves. Somewhere there's a rogue IoT device on a VLAN it has no business touching, a firewall rule that drifted out of policy, a service account with more access than anyone remembers granting. An outage or an attacker needs only one of those to be true. <strong>I assume one already is, and my job is to find it before anyone else notices.</strong> Most days, they don't.</p><p>Underneath the war stories: enterprise LAN/WAN, wireless, <em>Cisco, Aruba, Palo Alto</em>, and network automation in <em>Python</em>, backed by a <strong>Master's in Computer Science</strong> and a <strong>CCNA</strong> I treated as a checkpoint, not a finish line.</p><p>What I'm chasing next: deeper cloud-native networking, infrastructure-as-code at scale, and the problems that don't have a Cisco TAC article yet. The ones where you open <strong>Wireshark at midnight</strong> and start asking better questions.</p><p>Most people only think about the network when it stops. <strong>My job is to make sure they never have to.</strong> If you're building something that has to work, and work quietly, <strong>let's talk.</strong></p>",    "image": {
+      "url": "/static/images/bhonandh.png",
+      "size": {
+        "width": 2252,
+        "height": 2526
+      }
+    },
+    "cv": {
+      "download": "Kandru Resume.pdf"
+    },
+    "cta": {
+      "primary": {
+        "text": "Download CV",
+        "url": "/static/documents/Kandru Resume.pdf",
+        "icon": "mdi:download",
+        "ariaLabel": "Download CV as PDF"
+      },
+      "secondary": {
+        "text": "Get in Touch",
+        "url": "/contact",
+        "icon": "mdi:message-text-outline",
+        "ariaLabel": "Go to contact page"
+      }
+    },
+    "highlights": [
+      {
+        "icon": "mdi:certificate",
+        "title": "CCNA Infrastructure",
+        "sub": "Cisco validated expertise in enterprise core routing, high-density switching, and VLAN infrastructure."
+      },
+      {
+        "icon": "mdi:shield-lock",
+        "title": "Network Security & Edge",
+        "sub": "Deploying Palo Alto Firewalls, Cisco ASA, advanced ACL enforcement, and proactive threat isolation."
+      },
+      {
+        "icon": "mdi:cloud",
+        "title": "Hybrid Cloud Networks",
+        "sub": "Designing and architectural scaling of secure enterprise infrastructure extensions into Azure and AWS."
+      },
+      {
+        "icon": "mdi:monitor-dashboard",
+        "title": "Automation & Telemetry",
+        "sub": "Building Python firmware pipelines alongside proactive scale monitoring using SolarWinds and Syslog."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience & Education",
+    "label": "Where I've Worked & Studied",
+    "done": {
+      "icon": "emojione:hourglass-done"
+    },
+    "items": [
+      {
+        "company": "Seminole Hard Rock Hotel & Casino, Tampa, FL",
+          "title": "Network Engineer",
+          "years": "Jan 2026 - Present",
+          "description": [
+            "Design and operate Cisco Catalyst/ISR LAN/WAN infrastructure across a high-density, multi-floor campus, managing IDF/MDF/data center Layer 2/3 segments, VLAN architecture, VTP, QoS policies, and fiber backhaul to maintain 99.99% uptime for mission-critical revenue operations.",  
+            "Monitor and support security operations using SolarWinds and Syslog telemetry for proactive monitoring, log analysis, and vulnerability management. Leverage automation to improve threat isolation efficiency by 40%."
+          ],
+          "mainTech": ["Cisco IOS/Nexus/ISR","Palo Alto Firewalls","Aruba Switching & Wireless","Switching & Routing","Security"],
+          "icon": "devicon:cisco",
+          "technologies": [ "Cisco Catalyst","Cisco Nexus","Cisco ISR", "Cisco ASA","Cisco Meraki","Aruba Switching", "Aruba Wireless","TCP/IP", "DNS", "DHCP", "IPv4/IPv6", "VLAN", "VTP", "STP", "LACP", "EtherChannel", "BGP", "OSPF", "EIGRP", "MPLS", "VPN", "QoS", "VoIP", "SolarWinds", "Syslog", "SNMP","Network Security","Vulnerability Management", "VMware ESXi", "Windows Server","Fiber Optics", "IDF/MDF", "Data Center Operations"]
+      },
+      {
+        "company": "The Children's Museum of Indianapolis, Indianapolis, IN",
+          "title": "Network Administrator Intern",
+          "years": "May 2025 - Aug 2025",
+          "description": [
+            "Perform proactive troubleshooting and root cause analysis for network performance and connectivity issues, utilizing Wireshark packet captures, tcpdump, and switch logs to isolate communication anomalies during live production migrations.",
+            "Executed a multi-vendor Cisco-to-Aruba switching migration, validating 802.1Q trunking, LACP, and end-to-end Layer 3 connectivity for a zero-downtime cutover with full topology documentation."
+          ],
+          "mainTech": ["Cisco IOS/Nexus/ISR","Palo Alto Firewalls","Aruba Switching & Wireless","Switching & Routing","Security"],
+          "icon": "devicon:cisco",
+          "technologies": [ "Cisco Catalyst","Cisco Nexus","Cisco ISR", "Cisco ASA","Cisco Meraki","Aruba Switching", "Aruba Wireless","TCP/IP", "DNS", "DHCP", "IPv4/IPv6", "VLAN", "VTP", "STP", "LACP", "EtherChannel", "BGP", "OSPF", "EIGRP", "MPLS", "VPN", "QoS", "VoIP", "SolarWinds", "Syslog", "SNMP","Network Security","Vulnerability Management", "VMware ESXi", "Windows Server","Fiber Optics", "IDF/MDF", "Data Center Operations"]
+      },
+      {
+        "company": "Indiana State University, Terre Haute, IN",
+          "title": "Graduate Assistant",
+          "years": "Jan 2024 - Dec 202",
+          "description": [
+            "Handled network and connectivity tickets for students, faculty, and campus operations through the campus ITSM queue under SLA driven response timelines.",
+            "Monitored OSPF routing stability, link utilization, and enterprise network health for 10,000+ concurrent users using SNMP and Syslog telemetry, preempting routing anomalies before user impact."
+          ],
+          "mainTech": ["ServiceNow", "Switching", "SolarWinds","Syslog","Cisco IOS/Nexus/ISR"],
+          "icon": "devicon:cisco",
+          "technologies": [ "Cisco Catalyst","Cisco Nexus","Cisco ISR", "Cisco ASA","Cisco Meraki","Aruba Switching", "Aruba Wireless","TCP/IP", "DNS", "DHCP", "IPv4/IPv6", "VLAN", "VTP", "STP", "LACP", "EtherChannel", "BGP", "OSPF", "EIGRP", "MPLS", "VPN", "QoS", "VoIP", "SolarWinds", "Syslog", "SNMP","Network Security","Vulnerability Management", "VMware ESXi", "Windows Server","Fiber Optics", "IDF/MDF", "Data Center Operations"]
+      
+      },
+      {
+        "company": "Indiana State University, Terre Haute, IN",
+        "title": "Master of Science in Computer Science",
+        "years": "Jan 2024 - Dec 2025",
+        "description": [
+          "Completed advanced graduate coursework and projects in core computer science domains including Cloud Computing, Cybersecurity, Data Science, Operating, and Computer Networks.",
+          "Developed and implemented real-time data-driven and dashboards, focusing on scalable architecture, secure system design, and distributed computing principles.",
+          "Engineered secure network access solutions and explored enterprise-level VPN architectures, emphasizing secure communication, authentication, and system reliability.",
+          "Worked on applied machine learning and analytics projects involving data processing, visualization, and performance optimization for real-world problem-solving."
+        ],
+        "mainTech": ["Cloud Computing", "Cyber Security", "Data Science", "Operating", "Computer Networks"],
+        "icon": "devicon:java",
+        "technologies": ["Distributed", "Virtualization","Network Security", "Data Analytics","System Design", "Database Management","Machine Learning Basics", "Linux Administration", "TCP/IP Networking", "Cloud Architecture Fundamentals"]
+      },
+      {
+        "company": "SRM University, Chennai, India",
+        "title": "B.Tech in Computer Science and Engineering with Specialization in Big Data Analytics",
+        "years": "Jul 2019 - May 2023",
+        "description": [
+          "Built a strong foundation in Computer Science with specialization in Big Data Analytics, Artificial Intelligence, Machine Learning, Cybersecurity, and Cloud Computing, focusing on scalable and intelligent design.",
+          "Developed AI/ML based solutions for predictive analytics, classification, and pattern recognition using structured and unstructured datasets, applying supervised and unsupervised learning techniques.",
+          "Gained hands on experience in cybersecurity fundamentals including secure system design, encryption techniques, network security principles, and vulnerability assessment methodologies.",
+          "Worked on cloud based deployments and architecture models emphasizing scalability, fault tolerance, and high availability using modern cloud computing concepts.",
+          "Completed capstone and academic projects integrating AI/ML models with big data platforms for intelligent decision making and automation use cases."
+        ],
+        "mainTech": ["Artificial Intelligence", "Machine Learning","Big Data Analytics", "Cyber Security", "Cloud Computing"],
+        "icon": "devicon:python",
+        "technologies": [
+          "Python for AI/ML",
+          "Machine Learning Algorithms",
+          "Deep Learning Fundamentals",
+          "Neural Networks",
+          "Natural Language Processing (NLP)",
+          "Data Mining & Pattern Recognition",
+          "Hadoop Ecosystem (HDFS, MapReduce, YARN)",
+          "Apache Spark",
+          "Kafka",
+          "Hive",
+          "SQL & NoSQL Databases",
+          "ETL Pipelines",
+          "Data Warehousing",
+          "Statistical Analysis",
+          "Cloud Computing (AWS/Azure/GCP Basics)",
+          "Virtualization & Containerization Basics",
+          "Cybersecurity Fundamentals",
+          "Cryptography & Encryption",
+          "Network Security Principles",
+          "Secure Software Development Practices",
+          "Linux & System Administration",
+          "Distributed"
+        ]
+      }
+    ]
+  },
+"projects": {
+    "title": "Projects",
+    "label": "What I've built",
+    "items": [
+      {
+        "title": "Automated Network Configuration Drift & Compliance Engine",
+        "startDate": "Jan 2026",
+        "description": "An immutable NetDevOps state-validation platform engineered to proactively audit, detect, and alert on unauthorized configuration drift across distributed multi-vendor enterprise infrastructure. Operating as a programmatic compliance pipeline, the orchestration engine leverages Python and Netmiko to execute highly secure, parallelized SSH sessions across 20+ live production devices. Running configurations are ingested dynamically and parsed against Git-tracked 'golden baselines' utilizing custom algorithmic diff logic. Detected policy deviations, unauthorized firewall alterations, or protocol discrepancies trigger an automated remediation workflow that aggregates structured, color-coded cryptographic delta reports, dispatching telemetry warnings via secure SMTP endpoints. This closed-loop audit framework successfully eliminated manual validation overhead by 80%, establishing a continuous integration and continuous deployment (CI/CD) governance standard for network infrastructure safety.",
+        "theme": {
+          "text": "light",
+          "border": "light",
+          "background": "dark"
+        },
+        "thumbnail": "mdi:git-alert",
+        "images": [
+          {
+            "url": "/static/images/projects/Config/Net Config.png",
+            "alt": "Automated compliance dashboard highlighting multi-vendor configuration status and detected deltas",
+            "size": {
+              "width": 1280,
+              "height": 800
+            }
+          }
+        ],
+        "url": "#",
+        "technologies": [
+          {
+            "class": "devicon:python",
+            "name": "Python"
+          },
+          {
+            "class": "mdi:ssh",
+            "name": "Netmiko"
+          },
+          {
+            "class": "devicon:git",
+            "name": "Git Baseline Control"
+          },
+          {
+            "class": "mdi:email-outline",
+            "name": "SMTP Telemetry"
+          },
+          {
+            "class": "mdi:file-compare",
+            "name": "Difflib Engine"
+          }
+        ]
+      },
+      {
+        "title": "Development Of Smart Energy Meter Using IOT",
+        "startDate": "May 2023",
+        "description": "Peer-reviewed and published research architecture engineering a high-reliability, edge-to-cloud IoT telemetry network optimized for real-time power consumption metrics across distributed industrial nodes. Published in the ICCS proceedings via SSRN and Elsevier, the system focuses on maintaining network survivability, packet delivery assurance, and data integrity over volatile wireless backhauls. The edge tier captures granular voltage, current, and load metrics, packaging data packets into a highly optimized payload layer. Data routing is governed by an asynchronous MQTT pub/sub broker mesh to minimize link overhead and bandwidth strain. Ingestion pipes feed real-time cloud data pipelines, driving low-latency operational dashboards capable of executing remote network controls, isolation protocols, and load-shedding commands across endpoints based on dynamic power grid conditions.",
+        "theme": {
+          "text": "light",
+          "border": "light",
+          "background": "dark"
+        },
+        "thumbnail": "mdi:transmission-tower",
+        "images": [
+          {
+            "url": "/static/images/projects/IoT/IoT Project.png",
+            "alt": "Architectural topology diagram mapping MQTT broker bridging edge telemetry nodes to cloud databases",
+            "size": {
+              "width": 1280,
+              "height": 800
+            }
+          }
+        ],
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4495903", 
+        "technologies": [
+          {
+            "class": "mdi:cpu",
+            "name": "IoT Edge Hardware"
+          },
+          {
+            "class": "mdi:cloud-sync-outline",
+            "name": "MQTT Protocol"
+          },
+          {
+            "class": "mdi:monitor-dashboard",
+            "name": "Cloud Telemetry"
+          },
+          {
+            "class": "mdi:book-open-page-variant",
+            "name": "Elsevier / SSRN Publication"
+          }
+        ]
+      }
+    ],
+    "certificates": [
+      {
+        "title": "Cisco Certified Network Associate (CCNA)",
+        "issuer": "Cisco",
+        "date": "Aug 2024",
+        "credentialId": "CSCO14718603",
+        "icon": "simple-icons:cisco",
+        "verificationUrl": "https://www.credly.com/badges/7107f5e7-3bf2-48bb-a2b0-f25847f81711/linked_in_profile"
+      },
+      {
+        "title": "Junior Cybersecurity Analyst",
+        "issuer": "Cisco",
+        "date": "May 2024",
+        "icon": "simple-icons:cisco",
+        "verificationUrl": "https://www.credly.com/badges/07c12f82-e35a-4d45-907a-f0e28f97622e/linked_in_profile"
+      },
+      {
+        "title": "Cisco Certified Network Professional (CCNP Enterprise)",
+        "issuer": "Cisco",
+        "date": "In Progress",
+        "icon": "simple-icons:cisco",
+        "verificationUrl": "https://www.credly.com"
+      },
+      {
+        "title": "Palo Alto Networks Certified Network Security Engineer (PCNSE)",
+        "issuer": "Palo Alto Networks",
+        "date": "In Progress",
+        "icon": "simple-icons:paloaltonetworks",
+        "verificationUrl": "https://www.credly.com"
+      },
+      {
+        "title": "Microsoft Certified: Azure Network Engineer Associate",
+        "issuer": "Microsoft",
+        "date": "In Progress",
+        "icon": "devicon:azure",
+        "verificationUrl": "https://learn.microsoft.com"
+      }
+    ],
+    "ctaText": "View Details"
+  },
+  "skills": {
+      "title": "Skills",
+      "label": "My toolkit",
+      "tagline": "Building expertise in networking, security, and cloud platforms.",
+      "marquee": [
+        "TCP/IP",
+        "BGP",
+        "OSPF",
+        "Cisco Nexus",
+        "Aruba",
+        "Palo Alto",
+        "FortiGate",
+        "Wireshark",
+        "Python",
+        "Azure VNet",
+        "Zero Trust",
+        "Incident Response",
+        "SD-WAN",
+        "VMware ESX",
+        "PCI-DSS"
+      ],
+      "categories": [
+        {
+          "categoryKey": "networking",
+          "title": "Enterprise Networking",
+          "icon": "mdi:lan"
+        },
+        {
+          "categoryKey": "security",
+          "title": "Network Security & Ops",
+          "icon": "mdi:shield-lock"
+        },
+        {
+          "categoryKey": "cloud",
+          "title": "Cloud Infrastructure",
+          "icon": "mdi:cloud"
+        },
+        {
+          "categoryKey": "automation",
+          "title": "Automation & DevOps",
+          "icon": "mdi:cogs"
+        }
+      ],
+      "icons": [
+        {
+          "name": "TCP/IP Suite & OSI Model",
+          "class": "mdi:transit-connection-horizontal",
+          "level": "95",
+          "category": "networking"
+        },
+        {
+          "name": "BGP (eBGP/iBGP) & MPLS L3VPN",
+          "class": "mdi:swap-horizontal",
+          "level": "90",
+          "category": "networking"
+        },
+        {
+          "name": "OSPF, EIGRP & Routing Protocols",
+          "class": "mdi:router-wireless",
+          "level": "90",
+          "category": "networking"
+        },
+        {
+          "name": "IPv4 / IPv6 Subnetting & QoS",
+          "class": "mdi:ip",
+          "level": "95",
+          "category": "networking"
+        },
+        {
+          "name": "STP, LACP, VLAN & VTP",
+          "class": "mdi:sitemap",
+          "level": "95",
+          "category": "networking"
+        },
+        {
+          "name": "Cisco IOS, Nexus & ISR Hardware",
+          "class": "simple-icons:cisco",
+          "level": "95",
+          "category": "networking"
+        },
+        {
+          "name": "Aruba Switching & Access Points",
+          "class": "simple-icons:aruba",
+          "level": "90",
+          "category": "networking"
+        },
+        {
+          "name": "SD-WAN Deployments & VPN",
+          "class": "mdi:cloud-sync",
+          "level": "90",
+          "category": "networking"
+        },
+        {
+          "name": "DNS Architecture & VoIP/Prime",
+          "class": "mdi:dns",
+          "level": "85",
+          "category": "networking"
+        },
+        {
+          "name": "Palo Alto Next-Gen Firewalls",
+          "class": "simple-icons:paloaltonetworks",
+          "level": "95",
+          "category": "security"
+        },
+        {
+          "name": "Fortinet FortiGate Firewalls",
+          "class": "simple-icons:fortinet",
+          "level": "90",
+          "category": "security"
+        },
+        {
+          "name": "Cisco ASA, FTD & Virtulization",
+          "class": "mdi:firewall",
+          "level": "90",
+          "category": "security"
+        },
+        {
+          "name": "ZTNA & NGFW Concepts",
+          "class": "mdi:server-security",
+          "level": "90",
+          "category": "security"
+        },
+        {
+          "name": "IDS / IPS & RADIUS/NPS",
+          "class": "mdi:radar",
+          "level": "90",
+          "category": "security"
+        },
+        {
+          "name": "VLAN Isolation & Hardening",
+          "class": "mdi:shield-alert",
+          "level": "95",
+          "category": "security"
+        },
+        {
+          "name": "Incident Response & SOC Ops",
+          "class": "mdi:alert-decagram",
+          "level": "90",
+          "category": "security"
+        },
+        {
+          "name": "SOX & PCI-DSS Compliance",
+          "class": "mdi:gavel",
+          "level": "85",
+          "category": "security"
+        },
+        {
+          "name": "Microsoft Azure Cloud Ecosystem",
+          "class": "devicon:azure",
+          "level": "90",
+          "category": "cloud"
+        },
+        {
+          "name": "Azure Net (VNet, NSG, Hybrid)",
+          "class": "mdi:network",
+          "level": "90",
+          "category": "cloud"
+        },
+        {
+          "name": "VMware ESX Virtualization",
+          "class": "simple-icons:vmware",
+          "level": "90",
+          "category": "cloud"
+        },
+        {
+          "name": "Windows Server & Active Directory",
+          "class": "mdi:microsoft-windows",
+          "level": "90",
+          "category": "cloud"
+        },
+        {
+          "name": "Zero Trust Architecture",
+          "class": "mdi:shield-lock",
+          "level": "90",
+          "category": "cloud"
+        },
+        {
+          "name": "Microsoft Visio Network Mapping",
+          "class": "mdi:vector-square",
+          "level": "95",
+          "category": "cloud"
+        },
+        {
+          "name": "Root Cause Analysis (RCA)",
+          "class": "mdi:magnify-scan",
+          "level": "90",
+          "category": "cloud"
+        },
+        {
+          "name": "Python NetDevOps Automation",
+          "class": "devicon:python",
+          "level": "85",
+          "category": "automation"
+        },
+        {
+          "name": "Gluware Orchestration Engine",
+          "class": "mdi:cog-network",
+          "level": "80",
+          "category": "automation"
+        },
+        {
+          "name": "Bicep & Infrastructure as Code",
+          "class": "mdi:shield-edit",
+          "level": "85",
+          "category": "automation"
+        },
+        {
+          "name": "CI/CD Pipeline Concepts",
+          "class": "mdi:pipeline",
+          "level": "85",
+          "category": "automation"
+        },
+        {
+          "name": "Packet Analysis (Wireshark/tcpdump)",
+          "class": "simple-icons:wireshark",
+          "level": "95",
+          "category": "automation"
+        },
+        {
+          "name": "NetFlow & SNMP Monitoring",
+          "class": "mdi:chart-timeline-variant",
+          "level": "90",
+          "category": "automation"
+        },
+        {
+          "name": "LogicMonitor & SolarWinds",
+          "class": "mdi:monitor-dashboard",
+          "level": "85",
+          "category": "automation"
+        },
+        {
+          "name": "Syslog & Enterprise Logging",
+          "class": "mdi:file-document-outline",
+          "level": "90",
+          "category": "automation"
+        },
+        {
+          "name": "ServiceNow & Power BI Reporting",
+          "class": "simple-icons:servicenow",
+          "level": "85",
+          "category": "automation"
+        }
+      ]
+  },
+  "contact": {
+    "title": "Contact",
+    "label": "Let's connect",
+    "tagline": "Let's work together on your next project",
+    "contactInfo": {
+      "title": "Get in touch.",
+      "description": "The fastest way is email. I reply within a working day.",
+      "items": [
+        {
+          "name": "Email",
+          "class": "clarity:email-solid",
+          "value": "bhonandhsaikandru2310@gmail.com",
+          "link": "mailto:bhonandhsaikandru2310@gmail.com"
+        },
+        {
+          "name": "Phone",
+          "class": "clarity:phone-handset-solid",
+          "value": "+1 682 382 1122",
+          "link": "tel:+6823821122"
+        },
+        {
+          "name": "LinkedIn",
+          "class": "mdi:linkedin",
+          "value": "in/bhonandh19",
+          "link": "https://www.linkedin.com/in/bhonandh19"
+        },
+        {
+          "name": "GitHub",
+          "class": "mdi:github",
+          "value": "bhonandh",
+          "link": "https://github.com/bhonandh"
+        }
+      ]
+    },
+    "send": {
+      "icon": "mdi:send",
+      "text": "Send Message"
+    },
+    "sendAgain": {
+      "icon": "mdi:email-edit-outline",
+      "text": "Send another message"
+    },
+    "submitting": {
+      "text": "Submitting..."
+    },
+    "error": {
+      "status": "danger",
+      "headerText": "There was a problem sending the message",
+      "bodyText": "Please try again soon, or contact me directly via email or phone",
+      "icon": "mdi:alert-circle"
+    },
+    "success": {
+      "status": "success",
+      "headerText": "Message sent!",
+      "bodyText": "I will be in touch with you shortly to answer your message.",
+      "icon": "mdi:check-circle"
+    },
+    "close": {
+      "icon": "mdi:close",
+      "ariaLabel": "Close notification"
+    }
+  },
+  "footer": {
+    "name": "Bhonandh Sai Kandru",
+    "tagline": "Network Engineer · Seminole Hard Rock · CCNA · Building infrastructure that can't afford to go down.",
+    "description": "Network Engineer · Seminole Hard Rock · CCNA · Building infrastructure that can't afford to go down",
+    "social": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/bhonandh",
+        "class": "fa6-brands:github"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/bhonandh19",
+        "class": "devicon:linkedin"
+      }
+    ],
+    "home": {
+      "text": "Bhonandh Sai Kandru",
+      "url": "/",
+      "ariaLabel": "Back to home"
+    },
+    "navigateText": "Navigate",
+    "elsewhereText": "Elsewhere",
+    "connectText": "Connect",
+    "version": "v3.0 · 2026",
+    "madeInPrefix": "Made in",
+    "copyright": "Designed & built with care.",
+    "builtWith": {
+      "pretext": "Built with ",
+      "icon": "mdi:heart",
+      "posttext": " & Next.js"
+    }
+  }
+}

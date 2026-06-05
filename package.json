@@ -1,0 +1,70 @@
+{
+  "name": "portfolio-next",
+  "description": "Bhonandh Sai Kandru online portfolio built with Next.js",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "homepage": "https://bhonandh.github.io/",
+  "author": "Bhonandh Sai Kandru <bhonandhsaikandru2310@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bhonandh/portfolio.git"
+  },
+  "engines": {
+    "node": "24.x",
+    "npm": "11.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "purgecss": "purgecss -c purgecss.config.cjs",
+    "analyze": "ANALYZE=true next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . && npm run lint:stylelint",
+    "lint:fix": "eslint . --fix && npm run lint:stylelint:fix",
+    "lint:stylelint": "stylelint '**/*.{scss,css}' --cache",
+    "lint:stylelint:fix": "stylelint '**/*.{scss,css}' --cache --fix",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx,js,json,css,yml,md}\"",
+    "prettier:write": "prettier --write \"**/*.{ts,tsx,js,json,css,scss,yml,md}\"",
+    "verify": "npm run prettier:check && npm run lint && npm run typecheck"
+  },
+  "dependencies": {
+    "@iconify/react": "^6.0.2",
+    "@next/third-parties": "^16.1.6",
+    "@vercel/functions": "^3.4.2",
+    "formik": "^2.4.9",
+    "framer-motion": "^12.38.0",
+    "leaflet": "^1.9.4",
+    "lenis": "^1.3.23",
+    "next": "^16.1.6",
+    "nodemailer": "^8.0.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-globe.gl": "^2.38.0",
+    "react-leaflet": "^5.0.0",
+    "react-type-animation": "^3.2.0",
+    "sass": "^1.97.3",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@next/bundle-analyzer": "^16.1.6",
+    "@next/eslint-plugin-next": "^16.1.6",
+    "@types/leaflet": "^1.9.21",
+    "@types/node": "^25.1.0",
+    "@types/nodemailer": "^7.0.10",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.6",
+    "globals": "^17.3.0",
+    "postcss": "^8.5.6",
+    "prettier": "^3.8.1",
+    "purgecss": "^8.0.0",
+    "serve": "^14.2.5",
+    "stylelint": "^17.3.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "typescript": "5.9.3"
+  }
+}

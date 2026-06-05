@@ -1,0 +1,386 @@
+/* =============================================================
+   Portfolio Redesign — global app shell
+   ============================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+iconify-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent-primary) 40%, transparent);
+  color: var(--text-primary);
+}
+
+#main-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* =============================================================
+   Section layout — shared by About, Experience, Projects, Skills, Contact
+   ============================================================= */
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 140px 32px 100px;
+  position: relative;
+}
+
+/* Section divider — gradient horizontal rule between sections */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(600px, 80%);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, var(--gradient-start) 50%, transparent) 20%,
+    color-mix(in oklab, var(--gradient-mid) 60%, transparent) 50%,
+    color-mix(in oklab, var(--gradient-end) 50%, transparent) 80%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* First section on a page has no top divider */
+.section:first-child::before {
+  display: none;
+}
+
+/* Top-right page slug — JetBrains Mono accent echoing the `//` greeting in Hero */
+.section__slug {
+  position: absolute;
+  top: 56px;
+  right: 32px;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: var(--fs-caption);
+  letter-spacing: 1px;
+  color: color-mix(in oklab, var(--text-primary) 32%, transparent);
+  pointer-events: none;
+  user-select: none;
+}
+
+.section__head {
+  margin-bottom: 64px;
+  position: relative;
+
+  &--centered {
+    text-align: center;
+  }
+}
+
+.section__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 18px;
+
+  &::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: currentColor;
+  }
+
+  &--centered::before {
+    display: none;
+  }
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: -2px;
+  line-height: 1;
+  margin: 0;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+
+  &-accent {
+    background: linear-gradient(
+      135deg,
+      var(--gradient-start),
+      var(--gradient-mid),
+      var(--gradient-end)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.section__sub {
+  margin: 18px 0 0;
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+  max-width: 620px;
+  line-height: var(--lh-loose);
+
+  .section__head--centered & {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* =============================================================
+   Reveal-on-scroll (Removed in favor of Framer Motion)
+   ============================================================= */
+
+/* =============================================================
+   Reusable building blocks
+   ============================================================= */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: var(--fs-2xs);
+  font-weight: 500;
+  background: color-mix(in oklab, var(--bg-tertiary) 60%, transparent);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: var(--fs-body-sm);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 15px 30px;
+  white-space: nowrap;
+  transition: all 0.3s var(--ease-standard);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* Shimmer sweep — shared by both variants */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      105deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.15) 50%,
+      transparent 70%
+    );
+    transition: none;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &:hover::after {
+    animation: btn-shimmer 0.7s ease forwards;
+  }
+
+  &--primary {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: #fff;
+    box-shadow: 0 8px 28px color-mix(in oklab, var(--accent-primary) 30%, transparent);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        var(--gradient-start),
+        var(--gradient-mid),
+        var(--gradient-end)
+      );
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 40px color-mix(in oklab, var(--accent-primary) 40%, transparent);
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  &--secondary {
+    background: color-mix(in oklab, var(--bg-tertiary) 70%, transparent);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(12px);
+
+    &:hover {
+      background: color-mix(in oklab, var(--accent-primary) 12%, transparent);
+      border-color: color-mix(in oklab, var(--accent-primary) 50%, transparent);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@keyframes btn-shimmer {
+  to {
+    left: 130%;
+  }
+}
+
+.magnet {
+  display: inline-block;
+  will-change: transform;
+  transition: transform 0.25s var(--ease-standard);
+}
+
+/* =============================================================
+   Page navigation CTA — shared bottom-of-section prompt.
+   Styled as wayfinding, not action — the gradient/ghost CTA pair is
+   reserved for page-level conversions (e.g. About: Download CV / Contact).
+   ============================================================= */
+.section__page-nav {
+  margin-top: 80px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  .btn,
+  .btn--primary,
+  .btn--secondary {
+    padding: 12px 22px;
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+    font-weight: 500;
+    backdrop-filter: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      color: var(--text-primary);
+      background: color-mix(in oklab, var(--accent-primary) 8%, transparent);
+      border-color: color-mix(in oklab, var(--accent-primary) 45%, transparent);
+      box-shadow: none;
+    }
+  }
+
+  /* Subtle accent on the recommended next page */
+  .btn--primary {
+    color: var(--text-primary);
+    border-color: color-mix(in oklab, var(--accent-primary) 35%, transparent);
+
+    &:hover {
+      background: color-mix(in oklab, var(--accent-primary) 14%, transparent);
+      border-color: color-mix(in oklab, var(--accent-primary) 60%, transparent);
+    }
+  }
+}
+
+/* =============================================================
+   Responsive
+   ============================================================= */
+@media (max-width: 640px) {
+  .section {
+    padding: 100px 20px 72px;
+  }
+  .section__slug {
+    top: 40px;
+    right: 20px;
+    font-size: var(--fs-2xs);
+  }
+  .section__head {
+    margin-bottom: 40px;
+  }
+  .section__sub {
+    font-size: var(--fs-body);
+  }
+  .section__page-nav {
+    margin-top: 56px;
+    padding-top: 32px;
+    gap: 12px;
+  }
+  .btn {
+    padding: 13px 22px;
+    font-size: var(--fs-body-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 88px 16px 60px;
+  }
+  .section__slug {
+    top: 32px;
+    right: 16px;
+  }
+  .section__label {
+    font-size: var(--fs-2xs);
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .section__head {
+    margin-bottom: 32px;
+  }
+  .section__page-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 48px;
+    padding-top: 28px;
+  }
+  .section__page-nav .magnet,
+  .section__page-nav .magnet > * {
+    width: 100%;
+  }
+  .btn {
+    padding: 14px 20px;
+    width: 100%;
+  }
+}
