@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 
-import { Project, Technology } from '@/types';
+import { Projects, Technology } from '@/types'; // Plural contract type
 
 import './ProjectDetailsModal.scss';
 
@@ -32,7 +32,7 @@ const ProjectDetailsModal = ({
   onHide,
   data,
 }: {
-  data: Project;
+  data: Projects; // FIXED: Updated to use the correct plural interface identity
   show: boolean;
   onHide: () => void;
 }) => {
@@ -152,10 +152,8 @@ const ProjectDetailsModal = ({
   };
 
   const getImageSlides = () => {
-    // Clone last slide before first and first slide after last for seamless looping
     const lastImage = images[images.length - 1];
     const firstImage = images[0];
-    // Track offset: index 0 maps to translateX(-100%) because of the prepended clone
     const trackOffset = (activeIndex + 1) * 100;
     const realIndex = ((activeIndex % images.length) + images.length) % images.length;
 
