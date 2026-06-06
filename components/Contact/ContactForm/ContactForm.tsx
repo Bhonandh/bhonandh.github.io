@@ -52,7 +52,7 @@ const ContactForm = ({ contact, onSuccess, onFail }: ContactFormProps) => {
           'Accept': 'application/json'
         },
         body: JSON.stringify({ 
-          access_key: '63462e35-f469-4652-b3fd-123939de41c6', // Your active token
+          access_key: '182e9ad6-324b-4b90-946c-4c7daf4bbcf5', // CHANGED: Your brand-new active token
           name: `${firstName} ${lastName}`, // Combines for Web3Forms dashboard view
           firstName,
           lastName,
