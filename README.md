@@ -1,4 +1,4 @@
-# Portfolio Next.js
+# Bhonandh's Portfolio Next.js
 
 This repo contains the code for my online web portfolio. It is built using [Next.js](https://nextjs.org/) (v16).
 
