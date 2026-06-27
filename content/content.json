@@ -351,7 +351,7 @@
         "verificationUrl": "https://www.credly.com"
       },
       {
-        "title": "Palo Alto Networks Certified Network Security Engineer (PCNSE)",
+        "title": "Palo Alto Networks Next-Generation Firewall Engineer (NGFW)",
         "issuer": "Palo Alto Networks",
         "date": "In Progress",
         "credentialId": "#",
@@ -359,11 +359,19 @@
         "verificationUrl": "https://www.credly.com"
       },
       {
-        "title": "Microsoft Certified: Azure Network Engineer Associate",
+        "title": "Microsoft Certified: Azure Network Engineer Associate (AZ-700)",
+        "issuer": "Microsoft",
+        "date": "June 2026",
+        "credentialId": "65BB1231CCA31240",
+        "icon": "devicon:azure",
+        "verificationUrl": "https://learn.microsoft.com/api/credentials/share/en-gb/BhonandhSaiKandru-4202/65BB1231CCA31240?sharingId"
+      },
+      {
+        "title": "Microsoft Certified : Cloud and AI Security Engineer Associate (SC-500)",
         "issuer": "Microsoft",
         "date": "In Progress",
-        "icon": "devicon:azure",
-        "verificationUrl": "https://learn.microsoft.com"
+        "icon": "devicon:microsoft",
+        "verificationUrl": "https://learn.microsoft.com/"
       }
     ],
     "ctaText": "View Details"
